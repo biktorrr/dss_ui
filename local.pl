@@ -4,3 +4,4 @@
 :- rdf_register_prefix(dss, 'http://purl.org/collections/nl/dss/').
 
 :- use_module(graph).
+:- use_module(localview).

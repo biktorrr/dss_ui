@@ -16,12 +16,13 @@ dss_context_predicate(_, mdb:bestemming).
 dss_context_predicate(_, mdb:has_aanmonstering).
 dss_context_predicate(_, mdb:persoon).
 dss_context_predicate(_, mdb:rang).
-dss_context_predicate(_, mdb:ship).
+dss_context_predicate(_, mdb:schip).
 dss_context_predicate(_, mdb:ligplaats).
 dss_context_predicate(_, mdb:thuishaven).
 dss_context_predicate(_, mdb:vertrekhaven).
 dss_context_predicate(_, mdb:woonplaats).
-dss_context_predicate(_, dss:has_schiptype).
+dss_context_predicate(_, dss:has_shiptype).
+dss_context_predicate(_, dss:hasOriginalScan).
 dss_context_predicate(_, mdb:has_person_contract).
 dss_context_predicate(_, mdb:has_contract).
 

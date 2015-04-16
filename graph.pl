@@ -1,4 +1,5 @@
 :- module(dss_graph, []).
+:- use_module(cliopatria(cliopatria)).
 :- use_module(cliopatria(hooks)).
 :- use_module(library(semweb/rdf_db)).
 :- use_module(library(semweb/rdfs)).
@@ -8,6 +9,7 @@ create_inverse_properties :-
 	       rdf_set_predicate(P, inverse_of(P2))).
 
 :- initialization create_inverse_properties.
+:- cp_after_load(create_inverse_properties).
 
 :- rdf_meta
 	dss_context_predicate(r, r).

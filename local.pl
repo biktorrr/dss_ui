@@ -6,4 +6,5 @@
 
 :- use_module(graph).
 :- use_module(localview).
+:- use_module(dss_queries).
 :- use_module(label).

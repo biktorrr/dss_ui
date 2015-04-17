@@ -28,6 +28,18 @@ dss_context_predicate(_, dss:hasOriginalScan).
 dss_context_predicate(_, mdb:has_person_contract).
 dss_context_predicate(_, mdb:has_contract).
 dss_context_predicate(_, dss:has_kb_link).
+dss_context_predicate(_, dss:has_ship).
+dss_context_predicate(_, dss:typeOfShip).
+dss_context_predicate(_, dss:has_record).
+dss_context_predicate(_, foaf:based_near).
+dss_context_predicate(_, gzmvoc:has_das_link_heen).
+dss_context_predicate(_, gzmvoc:has_das_link_terug).
+dss_context_predicate(_, gzmvoc:has_lokatie).
+dss_context_predicate(_, dss:has_captain).
+dss_context_predicate(_, dcterms:spatial).
+dss_context_predicate(_, das:chamber).
+dss_context_predicate(_, das:chamberForWhichCargoIsDestined).
+
 
 cliopatria:context_predicate(S, P) :-
 	dss_context_predicate(S, P).

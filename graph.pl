@@ -76,3 +76,13 @@ cliopatria:node_shape(Ship, Shape, _Options) :-
 	rdf(Ship, rdf:type, Type),
 	rdf_reachable(Type, rdfs:subClassOf, skos:'Concept'), !,
 	Shape = [ shape(trapezium), style(filled), fillcolor('#cccccc') ].
+
+cliopatria:bag_shape([First|_], Shape, _Options) :-
+	rdf(First, rdf:type, Type),
+	rdf_reachable(Type, rdfs:subClassOf, dss:'Record'), !,
+	Shape = [ max(25),
+		  shape(tab),
+		  style('filled,bold'),
+		  max_label_length(50)
+		].
+cliopatria:bag_shape(_Members, [max(25)], _Options).

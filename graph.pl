@@ -4,12 +4,21 @@
 :- use_module(library(semweb/rdf_db)).
 :- use_module(library(semweb/rdfs)).
 
+%%	create_inverse_properties
+%
+%	Set the predicate property `inverse_of`   on properties that are
+%	defined as `owl:inverseOf`. Should be called automatically.
+
 create_inverse_properties :-
 	forall(rdf(P, owl:inverseOf, P2),
 	       rdf_set_predicate(P, inverse_of(P2))).
 
 :- initialization create_inverse_properties.
 :- cp_after_load(create_inverse_properties).
+:- multifile user:message_hook/3.
+user:message_hook(rdf(loaded(_Action, _Source, _DB, _Triples, _Time)), _, _) :-
+	create_inverse_properties,
+	fail.
 
 :- rdf_meta
 	dss_context_predicate(r, r).

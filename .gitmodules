@@ -1,0 +1,6 @@
+[submodule "dss"]
+	path = dss
+	url = ../dss.git
+[submodule "dmd"]
+	path = dmd
+	url = ../dmd.git

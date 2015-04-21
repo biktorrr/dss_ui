@@ -1,15 +1,15 @@
 @prefix     void: <http://rdfs.org/ns/void#> .
 @prefix       dc: <http://purl.org/dc/terms/> .
 
-<dss-all>
+<00-dss-all>
 	a void:Dataset ;
-	dc:title "All DSS data" ;
+	dc:title "All Dutch Schips and Sailors (DSS) data" ;
 	void:subset
 		<dss/rdf/dss> ,
 		<dss/rdf/gzmvoc> ,
 		<dss/rdf/mdb> ,
 		<dss/rdf/aatned> ,
 		<dss/rdf/das> ,
-		<dss/rdf/geonames-nl> ,
+		<dss/rdf/GeoNames/geonames-nl> ,
 		<dmd/rdf/dmd_scans> .
 

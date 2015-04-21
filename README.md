@@ -50,5 +50,18 @@
 	?- cpack_install(isearch).
 	?- cpack_install(swish).
 	```
+  - Login as `admin` using the password you set before.  Load the
+    data by using _Repository/Load from library_ and choos the
+    first (_00-dss-all -- All Dutch Schips and Sailors (DSS) data_)
 
-FIXME: Describe how to install all data
+# Running the server
+
+With the above steps, the server is fully configured.  Restarting
+is easy: just run (double click on Windows):
+
+   ```
+   ./run.pl
+   ```
+
+The script `daemon.pl` can be used to run the server as a service
+on Unix based systems.

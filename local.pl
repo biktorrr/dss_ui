@@ -1,5 +1,8 @@
 :- use_module(library(semweb/rdf_db)).
 :- use_module(library(semweb/rdf_library)).
+:- use_module(library(settings)).
+
+:- set_setting_default(http:logfile, 'log/httpd.log').
 
 :- rdf_register_prefix(mdb,    'http://purl.org/collections/nl/dss/mdb/').
 :- rdf_register_prefix(gzmvoc, 'http://purl.org/collections/nl/dss/gzmvoc/').

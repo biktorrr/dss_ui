@@ -2,6 +2,8 @@
 :- use_module(cliopatria(hooks)).
 :- use_module(library(semweb/rdf11)).
 
+:- rdf_meta rdf_has_string(r,r,-).
+
 rdf_label:display_label_hook(R, _Lang, Label) :-
 	rdf(R, rdf:type, Type),
 	rdf_reachable(Type, rdfs:subClassOf, foaf:'Person'),
@@ -28,11 +30,11 @@ rdf_label:display_label_hook(R, _Lang, Label) :-
 
 rang(R, RangLabel) :-
 	rdf(R, mdb:rang, Rang),
-	rdf(Rang, skos:prefLabel, literal(RangLabel)).
+	rdf_has_string(Rang, skos:prefLabel, RangLabel).
 
 woonplaats(Person, Woonplaats) :-
 	rdf_has(Person, mdb:woonplaats, WP),
-	rdf_has(WP, rdfs:label, literal(Woonplaats)).
+	rdf_has_string(WP, rdfs:label, Woonplaats).
 
 rdf_has_string(S,P,String) :-
 	rdf_has(S,P,L),
